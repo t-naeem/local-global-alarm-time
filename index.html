@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>World Clock</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">World Clock</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container my-4">
+        <div class="jumbotron">
+            <h1 class="display-4"> <span id="time"></span></h1>
+            <p class="lead">If time is what you care about, we have got you covered. On this website, you can see time locally and globally. You can also set an alarm.</p>
+            <hr class="my-4">
+            <p>We are here to show you the time for different countries</p>
+            <button id="toggleBrowseCollapse" type="button" onclick="browseTimes()" class="btn btn-dark">Browse
+                Timezones</button>
+        </div>
+
+        <div>
+            <div id="loadingBrowseTimes" class="spinner-grow" role="status" style="display: none;">
+                <span class="visually-hidden"></span>
+            </div>
+            <h6><span id="intlTimes"></span></h6>
+        </div>
+
+
+        <div id='alarm-container'>
+            <h3>Set Alarm Time</h3>
+            <label>
+                <div>
+                    <select id='alarmHours'></select>
+                </div>
+            </label>
+            <label>
+                <div>
+                    <select id='alarmMinutes'></select>
+                </div>
+            </label>
+            <label>
+                <div>
+                    <select id='alarmSeconds'></select>
+                </div>
+            </label> <br>
+            <button type="button" onclick="setAlarm()" class="btn btn-dark">Set Alarm</button>
+            <button type="button" onclick="clearAlarm()" class="btn btn-danger">Clear Alarm</button>
+
+        </div>
+    </div>
+    </div>
+
+    <audio src="Ringtone.wav"></audio>
+    <script src="index.js"></script>
+</body>
+
+</html>
